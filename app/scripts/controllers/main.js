@@ -7,11 +7,13 @@
  * # MainCtrl
  * Controller of the weatherappApp
  */
-angular.module('weatherappApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ angular.module('weatherappApp')
+   .controller('MainCtrl', function ($scope, current) {
+     $scope.current = current.query();
+
+     $scope.refreshCurrent = function(){
+            $scope.current = current.query({
+                location: $scope.location
+            });
+        };
+      });
