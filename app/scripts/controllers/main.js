@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name weatherappApp.controller:MainCtrl
+ * @name yourApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the weatherappApp
+ * Controller of the yourApp
  */
  angular.module('weatherappApp')
    .controller('MainCtrl', function ($scope, citysearch) {

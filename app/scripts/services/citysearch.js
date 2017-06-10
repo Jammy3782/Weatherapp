@@ -12,10 +12,9 @@ angular.module('weatherappApp')
     // Service logic
     // ...
 
-    var meaningOfLife = 42;
 
     // Public API here
-    return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&APPID=f2db6ae4b7593127d74095711aacb98f', {}, {
+    return $resource('http://api.openweathermap.org/data/2.5/find?q=paris&type=like&mode=json&APPID=f2db6ae4b7593127d74095711aacb98fE', {}, {
         find: {
           method: 'GET',
           params: {
