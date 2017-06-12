@@ -1,10 +1,8 @@
-'use strict';
-
 angular.module('weatherappApp')
-  .controller('CurrentCtrl', function ($scope, $routeParams, current, $localStorage) {
+  .controller('CurrentCtrl', function ($scope, $routeParams, CurrentWeather, $localStorage) {
     $scope.cityID = $routeParams.cityID;
 
-    $scope.currentWeather = current.query({
+    $scope.currentWeather = CurrentWeather.query({
         cityID: $routeParams.cityID
     });
 
@@ -26,8 +24,14 @@ angular.module('weatherappApp')
             }
             if (save===true){
                 $localStorage.savedCities.push(cityData);
+                $scope.citySaved = {
+                    'success': true
+                };
             } else {
                 console.log('city already saved');
+                $scope.citySaved = {
+                    'duplicate': true
+                };
             }
         }
     };

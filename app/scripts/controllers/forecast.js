@@ -7,11 +7,11 @@
  * # ForecastCtrl
  * Controller of the weatherappApp
  */
-angular.module('weatherappApp')
-  .controller('ForecastCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ angular.module('weatherappApp')
+   .controller('ForecastCtrl', function ($scope, $routeParams, forecast) {
+     $scope.cityID = $routeParams.cityID;
+
+     $scope.forecastData = forecast.query({
+         cityID: $routeParams.cityID
+     });
+   });
