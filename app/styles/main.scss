@@ -15,6 +15,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-image: url("https://www.walldevil.com/wallpapers/a62/wallpaper-ocean-oceans-pixel-storm-screensavers-large-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #99ccff;
+  font: italic bold 12px/30px Georgia, serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
