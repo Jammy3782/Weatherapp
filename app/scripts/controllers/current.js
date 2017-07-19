@@ -1,8 +1,8 @@
 angular.module('weatherappApp')
-  .controller('CurrentCtrl', function ($scope, $routeParams, CurrentWeather, $localStorage) {
+  .controller('CurrentCtrl', function ($scope, $routeParams, current, $localStorage) {
     $scope.cityID = $routeParams.cityID;
 
-    $scope.currentWeather = CurrentWeather.query({
+    $scope.currentWeather = current.query({
         cityID: $routeParams.cityID
     });
 
