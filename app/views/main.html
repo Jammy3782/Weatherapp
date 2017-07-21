@@ -20,7 +20,7 @@
         <dt>Temperature</dt>
         <dd> <img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon" style="width: 100px;height: 100px;"></dd>
         <dd>{{city.main.temp}} &deg;F</dd>
-        <dd><a ng-href="/#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
+        <dd><a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
       </dl>
     </div>
   </p>
@@ -29,7 +29,7 @@
   <h2>Saved Cities</h2>
   <ul class="saved-cities-list">
     <li ng-repeat="city in storage.savedCities">
-      <a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
+      <a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
     </li>
   </ul>
 </div>
